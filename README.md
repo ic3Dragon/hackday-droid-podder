@@ -1,5 +1,8 @@
 # hackday-droid-podder
-An early-stage app for automating podcast creaton utilising external AI technologies to create audio and post summery based on user input.
+During the bootcamp at </Salt> we were given the challange to individually create a full stack application from scratch.
+We got to choose our projects freely.
+This app is what I built during that day.
+It's an early-stage app for automating podcast creaton utilising external AI technologies to create audio and post summery based on user input.
 
 ##API resources
 this app uses two external APIs for the conversions. You will need to create a developer account with both and save your keys into a local -env-file in the following format in order to access them. (OBS. dont include the "-marks)
