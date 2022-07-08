@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const summarize = require('./summarize');
-// const verbalize = require('./verbalize');
 
 const port = 8080;
 const app = express();

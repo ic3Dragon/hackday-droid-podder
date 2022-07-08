@@ -9,8 +9,6 @@ const Form = ({ setFetchText, setIsLoading, setSummary }) => {
     setInputText(event.target.value);
   };
 
-  // const requestOptions = ;
-
   const submitHandler = async event => {
     event.preventDefault();
     setIsLoading(true);

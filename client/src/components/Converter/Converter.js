@@ -2,8 +2,6 @@
 import React, { useState } from 'react'; // , useEffect
 import styled, { keyframes } from 'styled-components';
 import Form from './Form';
-// import SoundBox from './SoundBox';
-// import Summary from './Summary';
 
 const Converter = () => {
   const [fetchText, setFetchText] = useState('');
@@ -42,11 +40,6 @@ const Converter = () => {
         setFetchText={setFetchText}
         setIsLoading={setIsLoading}
         setSummary={setSummary} />
-      {/* audioContext={audioContext} */}
-      {/* <SoundBox
-        audio={audio}
-        isLoading={isLoading} /> */}
-      {/* audioContext={audioContext} */}
 
       {renderResults()}
 
