@@ -44,7 +44,6 @@ app.post('/soundbox', async (req, res) => {
   } else {
     res.sendFile('./public/voiced.mp3', { root: __dirname });
   }
-  // res.end();
 });
 
 app.listen(port, () => console.log(`Server is listening on port ${port}`));
