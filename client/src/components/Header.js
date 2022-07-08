@@ -9,7 +9,7 @@ const Header = () => (
 
 const Wrapper = styled.section`
 color: #9A031E; 
-margin-top: 1rem;
+margin-top: 1.5rem;
 font-size: 2.5rem;
 `;
 
