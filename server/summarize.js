@@ -8,7 +8,7 @@ const summarize = async myText => {
   const formdata = new FormData();
   formdata.append('key', apiKey);
   formdata.append('txt', myText);
-  formdata.append('limit', 50);
+  formdata.append('limit', 30);
 
   const requestOptions = {
     method: 'POST',
