@@ -25,12 +25,16 @@ const Converter = () => {
             <source src="http://localhost:8080/voiced.mp3" type="audio/mpeg" />
           </Audio>
           <ResultWrapper>
-            <SubHeading>Summary</SubHeading>
-            <TextBlock>{summary}</TextBlock>
+            <SubWrapper>
+              <SubHeading>Summary</SubHeading>
+              <TextBlock>{summary}</TextBlock>
+            </SubWrapper>
             {/* </ResultWrapper>
           <ResultWrapper> */}
-            <SubHeading> Your Text </SubHeading>
-            <TextBlock>{fetchText}</TextBlock>
+            <SubWrapper>
+              <SubHeading> Your Text </SubHeading>
+              <TextBlock>{fetchText}</TextBlock>
+            </SubWrapper>
           </ResultWrapper>
 
         </>
@@ -65,36 +69,46 @@ width: 80%;
 
 const Audio = styled.audio`
 filter: drop-shadow( 2px 3px 5px rgba(50, 50, 93, 0.25));
-/* , rgba(0, 0, 0, 0.3) 0px 8px 16px -8px); */
+width: 20%;
+margin: 2rem 0;
 background: transparent;
 &:hover {
-  transform: scale(1.02);
+  transform: scale(1.2);
   filter: drop-shadow(2px 3px 5px #333);
 }
 `;
 const ResultWrapper = styled.section`
-
 padding: 1rem;
 display: inherit; 
 font-size: 1rem;
-align-items: center;
-flex-direction: inherit;
-/* gap: 1rem;  */
+align-items: flex-start;
+justify-content:flex-start;
+flex-direction: row;
+flex-wrap:nowrap;
+gap: 2rem;
 text-align: center;
 width: 90%;
 border-radius: 1rem;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `;
 
+const SubWrapper = styled.section`
+width: 50%;
+`;
+
 const SubHeading = styled.h3`
 color: #E36414;
+margin-top: 1rem;
+font-size:2rem;
 `;
 
 const TextBlock = styled.p`
 text-align: justify;
+line-height: 2.2rem;
 margin-top:0.5rem;
 margin-bottom: 1rem;
 padding: 0 3rem;
+font-size:1.5rem;
 `;
 
 const LoadingWrapper = styled.div`

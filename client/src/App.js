@@ -17,7 +17,7 @@ const AppWrap = styled.section`
  display: flex;
  flex-direction: column; 
  align-items: center;
- gap: 2rem;
+ gap: 3rem;
  width: 90%;
  margin-left:5%;
  `;

@@ -59,17 +59,18 @@ const Form = ({ setFetchText, setIsLoading, setSummary }) => {
 const TextForm = styled.form`
 color: green; 
 display: flex;
-gap: 1rem;
+gap: 2rem;
 flex-direction: column;
 width: 70%;
 box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
 `;
 
 const TextArea = styled.textarea`
-  font-size:1rem;
+align-self: center;
+  font-size:1.5rem;
   font-family: 'Roboto Flex', sans-serif;
   border-radius: 1rem;
-  padding:0.5rem;
+  padding:1rem;
   width: 100%;
   border: 1px solid slategrey;
   outline:none;
@@ -94,7 +95,7 @@ align-self:center;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;
