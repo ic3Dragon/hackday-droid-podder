@@ -8,9 +8,9 @@ const Header = () => (
 );
 
 const Wrapper = styled.section`
-color: blue; 
+color: #9A031E; 
 margin-top: 1rem;
-font-size: 2rem;
+font-size: 2.5rem;
 `;
 
 export default Header;

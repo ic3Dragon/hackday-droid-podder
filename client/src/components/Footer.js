@@ -4,7 +4,12 @@ import styled from 'styled-components';
 const Footer = () => (
   <Wrapper>
     <PageInfo>
-      @ Footer goes here
+      Made with love by a
+      {' '}
+      <a href="https://www.salt.dev/" target="_blank" rel="noreferrer">{'</SALT>'}</a>
+      {' '}
+      developer.
+
     </PageInfo>
   </Wrapper>
 );

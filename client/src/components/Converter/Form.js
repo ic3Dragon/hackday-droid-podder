@@ -13,6 +13,7 @@ const Form = ({ setFetchText, setIsLoading, setSummary }) => {
     event.preventDefault();
     setIsLoading(true);
     setFetchText(inputText);
+    setSummary('');
 
     await fetch('http://localhost:8080/summary', {
       method: 'POST',
@@ -22,7 +23,7 @@ const Form = ({ setFetchText, setIsLoading, setSummary }) => {
       .then(data => data.json())
       .then(result => {
         setSummary(result);
-        console.log('summary fetch completed', result);
+        console.log('summary fetch completed');
       })
       .catch(error => console.log('error', error.message));
 
@@ -41,7 +42,7 @@ const Form = ({ setFetchText, setIsLoading, setSummary }) => {
 
   return (
     <TextForm onSubmit={submitHandler}>
-      <textarea
+      <TextArea
         rows="10"
         cols="70"
         type="text"
@@ -50,7 +51,7 @@ const Form = ({ setFetchText, setIsLoading, setSummary }) => {
         value={inputText}
         onChange={handleChange}
         required />
-      <button type="submit">Convert!</button>
+      <Button type="submit">Convert!</Button>
     </TextForm>
   );
 };
@@ -60,6 +61,65 @@ color: green;
 display: flex;
 gap: 1rem;
 flex-direction: column;
+width: 70%;
+box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+`;
+
+const TextArea = styled.textarea`
+  font-size:1rem;
+  font-family: 'Roboto Flex', sans-serif;
+  border-radius: 1rem;
+  padding:0.5rem;
+  width: 100%;
+  border: 1px solid slategrey;
+  outline:none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid #E36414;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+`;
+
+const Button = styled.button`
+align-self:center;
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #FB8B24;
+  border: 0px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 3px 5px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: max-content;
+
+&:hover {
+  background-color: #E36414;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 4px 6px;
+  transform: translateY(-2px);
+}
+
+&:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 4px 6px;
+  transform: translateY(0);
+}
 `;
 
 export default Form;
