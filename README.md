@@ -1,5 +1,5 @@
 # hackday-droid-podder
-During the bootcamp at </Salt> we were given the challange to individually create a full stack application from scratch.
+During the bootcamp at SALT we were given the challange to individually create a full stack application from scratch.
 We got to choose our projects freely.
 This app is what I built during that day.
 It's an early-stage app for automating podcast creaton utilising external AI technologies to create audio and post summery based on user input.
