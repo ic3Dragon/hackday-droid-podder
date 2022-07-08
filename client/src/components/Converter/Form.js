@@ -46,7 +46,7 @@ const Form = ({ setFetchText, setIsLoading, setSummary }) => {
         rows="10"
         cols="70"
         type="text"
-        placeholder="Write or paste your article here"
+        placeholder="Write or paste your article here."
         name="inputTextField"
         value={inputText}
         onChange={handleChange}
@@ -94,7 +94,7 @@ align-self:center;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;

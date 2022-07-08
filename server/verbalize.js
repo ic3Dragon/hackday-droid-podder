@@ -16,7 +16,7 @@ const verbalize = async text => {
     speaker_id: 'Bill Bosma',
     emphasis: '[0, 5]',
     speed: 1,
-    pause: 0,
+    pause: 1,
     encoding: 'mp3',
   };
   const option = {

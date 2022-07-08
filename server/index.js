@@ -40,7 +40,7 @@ app.post('/soundbox', async (req, res) => {
 
   const result = await verbalize(req.body.text);
   if (result === false) {
-    res.send('something went wrong');
+    res.status(400).send('something went wrong');
   } else {
     res.sendFile('./public/voiced.mp3', { root: __dirname });
   }

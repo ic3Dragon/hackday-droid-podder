@@ -60,7 +60,7 @@ align-items: center;
 flex-direction: inherit;
 gap: 1.5rem; 
 text-align: center;
-width: 100%;
+width: 80%;
 `;
 
 const Audio = styled.audio`
@@ -73,6 +73,7 @@ background: transparent;
 }
 `;
 const ResultWrapper = styled.section`
+
 padding: 1rem;
 display: inherit; 
 font-size: 1rem;
@@ -90,9 +91,10 @@ color: #E36414;
 `;
 
 const TextBlock = styled.p`
-/* margin-bottom:1rem; */
+text-align: justify;
 margin-top:0.5rem;
 margin-bottom: 1rem;
+padding: 0 3rem;
 `;
 
 const LoadingWrapper = styled.div`
