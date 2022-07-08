@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const summarize = require('./summarize');
+const verbalize = require('./verbalize');
 
 const port = 8080;
 const app = express();
@@ -36,17 +37,13 @@ app.post('/summary', async (req, res) => {
 
 app.post('/soundbox', async (req, res) => {
   console.log('post soundbox');
-  await setTimeout(() => {
-    res.sendFile('./public/voiced.mp3', { root: __dirname });
-  }, 500);
-  // uncomment bellow to go live again!
 
-  // const result = await verbalize(req.body.text);
-  // if (result === false) {
-  //   res.send('something went wrong');
-  // } else {
-  // res.sendFile('./public/voiced.mp3', { root: __dirname });
-  // }
+  const result = await verbalize(req.body.text);
+  if (result === false) {
+    res.send('something went wrong');
+  } else {
+    res.sendFile('./public/voiced.mp3', { root: __dirname });
+  }
   // res.end();
 });
 
