@@ -13,7 +13,6 @@ const summarize = async myText => {
   const requestOptions = {
     method: 'POST',
     body: formdata,
-    redirect: 'follow',
   };
 
   const response = await fetch('https://api.meaningcloud.com/summarization-1.0', requestOptions)
